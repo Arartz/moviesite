@@ -1,0 +1,25 @@
+<div class="hover-div"></div>
+
+<style>
+  .hover-div {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    transition: background-color 0.5s ease; /* Transition will complete after hover */
+  }
+
+  .hover-div:hover {
+    background-color: red; /* Change color on hover */
+  }
+
+  /* Add this for the animation completion even when the mouse leaves */
+  .hover-div.transition-complete {
+    animation: hoverComplete 0.5s forwards;
+  }
+
+  @keyframes hoverComplete {
+    100% {
+      background-color: red; /* Final color when animation completes */
+    }
+  }
+</style>
